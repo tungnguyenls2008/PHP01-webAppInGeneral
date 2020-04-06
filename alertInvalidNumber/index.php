@@ -18,13 +18,13 @@
 <?php
 function calc($x, $y)
 {
-    echo 'summary: '.($x + $y) . '<br>';
-    echo 'subtraction: '.($x - $y) . '<br>';
-    echo 'multiplication: '.($x * $y) . '<br>';
+    echo 'Summary: '.($x + $y) . '<br>';
+    echo 'Subtraction: '.($x - $y) . '<br>';
+    echo 'Multiplication: '.($x * $y) . '<br>';
     if ($y == 0) {
         throw new Exception("You can't divide by zero.");
     }
-    echo 'division: '.($x / $y) . '<br>';
+    echo 'Division: '.($x / $y) . '<br>';
 }
 
 if (isset($_POST["submit"])) {
