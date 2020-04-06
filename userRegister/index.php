@@ -49,12 +49,12 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         $usernameErr = "Username can't be empty!";
         $hasError = true;
     }
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $emailErr = "Not a valid email.";
+    if (empty($email)) {
+        $emailErr = "Email can't be empty!";
         $hasError = true;
     } else {
-        if (empty($email)) {
-            $emailErr = "Email can't be empty!";
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Not a valid email.";
             $hasError = true;
         }
     }
@@ -68,6 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         $email = NULL;
         $tel = NULL;
     }
+
 
 }
 ?>
@@ -112,7 +113,5 @@ $registrations = loadRegistrations('users.json');
         </tr>
     <?php endforeach; ?>
 </table>
-
-
 </body>
 </html>
