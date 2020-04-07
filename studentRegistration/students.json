@@ -1,0 +1,56 @@
+{
+  "0": {
+    "fullName": "Donald Trump",
+    "birthday": "2020-04-02",
+    "sex": null,
+    "address": "",
+    "className": "so",
+    "email": "dada@gmail.com",
+    "phone": "0914831089"
+  },
+  "18": {
+    "fullName": "Barack Obama",
+    "birthday": "2020-04-03",
+    "sex": "male",
+    "address": "135 l\u00ea \u0111\u1ea1i h\u00e0nh, ph\u01b0\u1eddng \u0111\u00f4ng kinh",
+    "className": "PHP 02",
+    "email": "blackgoofy13@gmail.com",
+    "phone": "0914831089"
+  },
+  "20": {
+    "fullName": "John Doe",
+    "birthday": "2020-04-10",
+    "sex": null,
+    "address": "135 l\u00ea \u0111\u1ea1i h\u00e0nh, ph\u01b0\u1eddng \u0111\u00f4ng kinh",
+    "className": "so",
+    "email": "lonelycount@gmail.com",
+    "phone": "0914831089"
+  },
+  "21": {
+    "fullName": "Fuck face",
+    "birthday": "2020-04-02",
+    "sex": "other",
+    "address": "Hell",
+    "className": "PHP 01",
+    "email": "dada@gmail.com",
+    "phone": "0914831089"
+  },
+  "22": {
+    "fullName": "Donald Trump",
+    "birthday": "2020-04-02",
+    "sex": null,
+    "address": "",
+    "className": "so",
+    "email": "dada@gmail.com",
+    "phone": "0914831089"
+  },
+  "23": {
+    "fullName": "Barack Obama",
+    "birthday": "2020-04-03",
+    "sex": "male",
+    "address": "135 l\u00ea \u0111\u1ea1i h\u00e0nh, ph\u01b0\u1eddng \u0111\u00f4ng kinh",
+    "className": "PHP 02",
+    "email": "blackgoofy13@gmail.com",
+    "phone": "0914831089"
+  }
+}
