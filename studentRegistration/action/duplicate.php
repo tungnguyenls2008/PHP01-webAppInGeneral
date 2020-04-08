@@ -1,6 +1,7 @@
 <?php
-include "../functions.php";
+include "../src/Students.php";
+include "../src/StudentManager.php";
 $index = (int)$_REQUEST['index'];
-
-duplicateStudent($index, "../students.json");
+$studentManager = new StudentManager("../students.json");
+$studentManager->duplicateStudent($index, "../students.json");
 header("Location: ../index.php");

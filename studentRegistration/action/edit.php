@@ -1,7 +1,8 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
-    include "../functions.php";
+    include "../src/Students.php";
+    include "../src/StudentManager.php";
     $index = $_REQUEST['index'];
     $fullName = $_POST['fullName'];
     $birthday = $_POST['birthday'];
@@ -30,7 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     }
     if ($hasError === false) {
         $student = ['fullName' => $fullName, 'birthday' => $birthday, 'sex' => $sex, 'address' => $address, 'className' => $classOf, 'email' => $email, 'phone' => $phone];
-        updateStudent($student, $index, "../students.json");
+        $studentManager = new StudentManager("../students.json");
+        $studentManager->updateStudent($student, $index, "../students.json");
         /*$fullName = NULL;
         $birthday = NULL;
         $sex = NULL;

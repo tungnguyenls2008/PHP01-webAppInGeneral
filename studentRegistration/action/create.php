@@ -1,6 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
-    include "../functions.php";
+    include "../src/Students.php";
+    include "../src/StudentManager.php";
     $fullName = $_POST['fullName'];
     $birthday = $_POST['birthday'];
     $sex = $_POST['sex'];
@@ -28,7 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     }
     if ($hasError === false) {
         $student=['fullName'=>$fullName,'birthday'=>$birthday, 'sex'=>$sex,'address'=>$address, 'className'=>$classOf,'email'=>$email,'phone'=>$phone];
-        saveDataJSON("../students.json", $student);
+        $studentManager = new StudentManager("../students.json");
+        $studentManager->addStudent($student);
         $fullName = NULL;
         $birthday = NULL;
         $sex = NULL;

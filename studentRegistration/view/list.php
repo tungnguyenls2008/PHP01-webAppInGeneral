@@ -14,7 +14,10 @@
         <th>PHONE</th>
         <th>ACTION</th>
     </tr>
-    <?php foreach ($registrations as $index => $registration):
+    <?php
+    include "../src/Students.php";
+    include "../src/StudentManager.php";
+    foreach ($registrations as $index => $registration):
         ?>
         <tr>
             <td class="studentListTd" hidden><input type="number" name="id[]" value="<?= $index ?>"></td>

@@ -1,5 +1,6 @@
 <?php
-
+include "../src/Students.php";
+include "../src/StudentManager.php";
 ?>
 <!doctype html>
 <html lang="en">

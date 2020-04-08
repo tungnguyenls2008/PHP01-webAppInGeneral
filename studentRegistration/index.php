@@ -11,8 +11,10 @@
 <form method="post">
 
     <?php
-    include "functions.php";
-    $registrations = loadRegistrations('students.json');
+    include "src/Students.php";
+    include "src/StudentManager.php";
+    $studentManager=new StudentManager('students.json');
+    $students=$studentManager->getStudents();
      ?>
 
     <h1>STUDENT LIST</h1><br>
@@ -30,18 +32,18 @@
             <th>PHONE</th>
             <th>ACTION</th>
         </tr>
-        <?php foreach ($registrations as $index => $registration):
+        <?php foreach ($students as $index => $student):
         ?>
         <tr>
             <td class="studentListTd" hidden><input type="number" name="id[]" value="<?= $index ?>"></td>
             <td class="studentListTd"><?= $index + 1 ?></td>
-            <td class="studentListTd"><?= $registration['fullName']; ?></td>
-            <td class="studentListTd"><?= $registration['birthday']; ?></td>
-            <td class="studentListTd"><?= $registration['sex']; ?></td>
-            <td class="studentListTd"><?= $registration['address']; ?></td>
-            <td class="studentListTd"><?= $registration['className']; ?></td>
-            <td class="studentListTd"><?= $registration['email']; ?></td>
-            <td class="studentListTd"><?= $registration['phone']; ?></td>
+            <td class="studentListTd"><?= $student['fullName']; ?></td>
+            <td class="studentListTd"><?= $student['birthday']; ?></td>
+            <td class="studentListTd"><?= $student['sex']; ?></td>
+            <td class="studentListTd"><?= $student['address']; ?></td>
+            <td class="studentListTd"><?= $student['className']; ?></td>
+            <td class="studentListTd"><?= $student['email']; ?></td>
+            <td class="studentListTd"><?= $student['phone']; ?></td>
             <td class="studentListTd"><a href="view/edit.php?index=<?php echo $index ?>">EDIT</a>
                 <a onclick="return confirm('Do you really want to delete this entry?')"
                    href="action/delete.php?index=<?php echo $index ?>">DELETE</a>
