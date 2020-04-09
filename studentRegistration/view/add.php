@@ -21,12 +21,12 @@ include "../src/StudentManager.php";
         <table>
             <tr>
                 <td>FULL NAME</td>
-                <td><input type="text" name="fullName" value="<?php echo $fullName;  ?>">
-                    <span class=" error">* <?php echo $fullNameErr;  ?></span></td>
+                <td><input type="text" name="fullName">
+                    <span class=" error">* </span></td>
             </tr>
             <tr>
                 <td>BIRTHDAY</td>
-                <td><input type="date" name="birthday" value="<?php echo $birthday; ?>"></td>
+                <td><input type="date" name="birthday"></td>
             </tr>
             <tr>
                 <td>GENDER</td>
@@ -39,7 +39,7 @@ include "../src/StudentManager.php";
             <tr>
                 <td>ADDRESS</td>
                 <td><textarea name="address" placeholder="Enter address here"
-                              value="<?php echo $address;  ?>"></textarea></td>
+                              ></textarea></td>
             </tr>
             <tr>
                 <td>CLASS OF</td>
@@ -54,13 +54,13 @@ include "../src/StudentManager.php";
             </tr>
             <tr>
                 <td>EMAIL</td>
-                <td><input type="text" name="email" value="<?php echo $email;  ?>">
-                    <span class=" error">* <?php echo $emailErr; ?></span></td>
+                <td><input type="text" name="email" >
+                    <span class=" error">* </span></td>
             </tr>
             <tr>
                 <td>PHONE NUMBER</td>
-                <td><input type="text" name="phone" value="<?php echo $phone;  ?>">
-                    <span class="error">* <?php echo $phoneErr; ?></span></td>
+                <td><input type="text" name="phone" >
+                    <span class="error">* </span></td>
             </tr>
             <tr>
                 <td></td>

@@ -1,8 +1,9 @@
 <?php
 include "../src/Students.php";
 include "../src/StudentManager.php";
-$index = $_REQUEST['index'];
-$student = (new StudentManager)->getStudentByIndex($index, "../students.json");
+$index = (int)$_REQUEST['index'];
+$studentManager=new StudentManager('../student.json');
+$student = $studentManager->getStudentByIndex($index);
 ?>
 <!doctype html>
 <html lang="en">

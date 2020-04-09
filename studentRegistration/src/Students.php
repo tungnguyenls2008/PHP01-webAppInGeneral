@@ -1,19 +1,28 @@
 <?php
-include "StudentManager.php";
+//include_once  "StudentManager.php";
 
 class Students
 {
-    protected  $fullNameErr;
-    protected  $emailErr;
-    protected  $phoneErr;
+
     protected  $fullName;
     protected  $birthday;
-    protected  $sex;
+    protected  $gender;
     protected  $address;
     protected  $classOf;
     protected  $email;
     protected  $phone;
 
+    public function __construct($fullName,$birthday,$gender,$address,$classOf,$email,$phone)
+    {
+
+        $this->fullName=$fullName;
+        $this->birthday=$birthday;
+        $this->gender=$gender;
+        $this->address=$address;
+        $this->classOf=$classOf;
+        $this->email=$email;
+        $this->phone=$phone;
+    }
     /**
      * @return mixed
      */
@@ -33,9 +42,9 @@ class Students
     /**
      * @return mixed
      */
-    public function getSex()
+    public function getGender()
     {
-        return $this->sex;
+        return $this->gender;
     }
 
     /**
@@ -62,37 +71,12 @@ class Students
         return $this->email;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getEmailErr()
-    {
-        return $this->emailErr;
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getFullNameErr()
-    {
-        return $this->fullNameErr;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getPhone()
     {
         return $this->phone;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPhoneErr()
-    {
-        return $this->phoneErr;
-    }
 
     /**
      * @param mixed $birthday
@@ -126,13 +110,7 @@ class Students
         $this->email = $email;
     }
 
-    /**
-     * @param mixed $emailErr
-     */
-    public function setEmailErr($emailErr)
-    {
-        $this->emailErr = $emailErr;
-    }
+
 
     /**
      * @param mixed $fullName
@@ -142,13 +120,6 @@ class Students
         $this->fullName = $fullName;
     }
 
-    /**
-     * @param mixed $fullNameErr
-     */
-    public function setFullNameErr($fullNameErr)
-    {
-        $this->fullNameErr = $fullNameErr;
-    }
 
     /**
      * @param mixed $phone
@@ -159,33 +130,14 @@ class Students
     }
 
     /**
-     * @param mixed $sex
+     * @param mixed $gender
      */
-    public function setSex($sex)
+    public function setSex($gender)
     {
-        $this->sex = $sex;
+        $this->gender = $gender;
     }
 
-    /**
-     * @param mixed $phoneErr
-     */
-    public function setPhoneErr($phoneErr)
-    {
-        $this->phoneErr = $phoneErr;
-    }
-    public function __construct($fullNameErr,$emailErr,$phoneErr,$fullName,$birthday,$sex,$address,$classOf,$email,$phone)
-    {
-        $this->setFullNameErr($fullNameErr);
-        $this->setEmailErr($emailErr);
-        $this->setphoneErr($phoneErr);
-        $this->setfullName($fullName);
-        $this->setBirthday($birthday);
-        $this->setSex($sex);
-        $this->setAddress($address);
-        $this->setClassOf($classOf);
-        $this->setEmail($email);
-        $this->setPhone($phone);
-    }
+
 
 
 

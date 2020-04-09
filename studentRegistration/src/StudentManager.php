@@ -1,5 +1,5 @@
 <?php
-include "Students.php";
+//include_once  "Students.php";
 
 class StudentManager
 {
@@ -11,18 +11,17 @@ class StudentManager
         $this->filePath = $filePath;
     }
 
-    function loadRegistrations()
+    public function loadRegistrations()
     {
         $jsonData = file_get_contents($this->filePath);
         return json_decode($jsonData, true);
     }
 
-    function saveDataJSON($filename, $data)
+    public function saveDataJSON($filename, $data)
     {
         try {
-            $arr_data = loadRegistrations($filename);
-            array_push($arr_data, $data);
-            $jsonData = json_encode($arr_data, JSON_PRETTY_PRINT);
+
+            $jsonData = json_encode($data, JSON_PRETTY_PRINT);
             file_put_contents($filename, $jsonData);
             echo 'Data successfully saved';
         } catch (Exception $e) {
@@ -30,21 +29,24 @@ class StudentManager
         }
     }
 
-    function getStudents()
+    public function getStudents()
     {
         $data = $this->loadRegistrations();
+
         foreach ($data as $obj) {
-            $student = new Students($obj->fullNameErr, $obj->emailErr, $obj->phoneErr, $obj->fullName, $obj->birthday, $obj->sex, $obj->address, $obj->classOf, $obj->email, $obj->phone);
+            $student = new Students($obj['fullName'], $obj['birthday'],$obj['gender'], $obj['address'], $obj['classOf'], $obj['email'], $obj['phone']);
+
             array_push($this->listStudent, $student);
         }
         return $this->listStudent;
     }
 
 
-    public function addStudent($student)
+    function addStudent($student)
     {
+
         if ($_SERVER["REQUEST_METHOD"] == 'POST') {
-            $students = $this->loadRegistrations();
+            $studentsList = $this->loadRegistrations();
             /*$student = [$fullName = $_POST['fullName'],
                 $birthday = $_POST['birthday'],
                 $sex = $_POST['sex'],
@@ -54,8 +56,8 @@ class StudentManager
                 $phone = $_POST['phone']
             ];*/
 
-            array_push($students, $student);
-            $this->saveDataJSON("students.json", $students);
+            array_push($studentsList, $student);
+            $this->saveDataJSON("../students.json", $studentsList);
 
             /*$index = $_POST['id[]'];
             $fullName = $_POST['fullName'];
@@ -102,7 +104,7 @@ class StudentManager
     function deleteStudent($index, $filePath)
     {
 
-        $registrations = loadRegistrations($filePath);
+        $registrations = $this->loadRegistrations();
         unset($registrations[$index]);
         $newData = json_encode($registrations, JSON_PRETTY_PRINT);
         file_put_contents($filePath, $newData);
@@ -111,34 +113,33 @@ class StudentManager
 
     function updateStudent($data, $index, $filePath)
     {
-        $registrations = loadRegistrations($filePath);
+        $registrations = $this->loadRegistrations();
         $registrations[$index] = $data;
-        $dataUpdated = json_encode($registrations);
+        $dataUpdated = json_encode($registrations,JSON_PRETTY_PRINT);
         file_put_contents($filePath, $dataUpdated);
 
     }
 
     function duplicateStudent($index, $filePath)
     {
-        $registrations = loadRegistrations($filePath);
-        $registrations[] = array_push($registrations, $registrations[$index]);
-
-        $dataUpdated = json_encode($registrations);
+        $registrations = $this->loadRegistrations();
+        array_push($registrations, $registrations[$index]);
+        $dataUpdated = json_encode($registrations,JSON_PRETTY_PRINT);
         file_put_contents($filePath, $dataUpdated);
     }
 
-    function searchByName($searchStr, $filePath)
+    function searchByName($searchStr)
     {
-        $registrations = loadRegistrations($filePath);
+        $registrations = $this->loadRegistrations();
         $index = array_search($searchStr, $registrations);
         $result = $registrations[$index];
 
         var_dump($result);
     }
 
-    function getStudentByIndex($index, $filePath)
+    public function getStudentByIndex($index)
     {
-        $registrations = loadRegistrations($filePath);
+        $registrations = $this->loadRegistrations();
         return $registrations[$index];
     }
 }

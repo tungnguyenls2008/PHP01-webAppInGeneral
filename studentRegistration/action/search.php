@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     include "../src/StudentManager.php";
     $searchStr=$_REQUEST['searchByName'];
     $studentManager = new StudentManager("../students.json");
-    $studentManager->searchByName($searchStr,"../students.json");
+    $studentManager->searchByName($searchStr);
 }
 
 

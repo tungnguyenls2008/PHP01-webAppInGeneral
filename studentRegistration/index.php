@@ -15,6 +15,7 @@
     include "src/StudentManager.php";
     $studentManager=new StudentManager('students.json');
     $students=$studentManager->getStudents();
+
      ?>
 
     <h1>STUDENT LIST</h1><br>
@@ -37,13 +38,13 @@
         <tr>
             <td class="studentListTd" hidden><input type="number" name="id[]" value="<?= $index ?>"></td>
             <td class="studentListTd"><?= $index + 1 ?></td>
-            <td class="studentListTd"><?= $student['fullName']; ?></td>
-            <td class="studentListTd"><?= $student['birthday']; ?></td>
-            <td class="studentListTd"><?= $student['sex']; ?></td>
-            <td class="studentListTd"><?= $student['address']; ?></td>
-            <td class="studentListTd"><?= $student['className']; ?></td>
-            <td class="studentListTd"><?= $student['email']; ?></td>
-            <td class="studentListTd"><?= $student['phone']; ?></td>
+            <td class="studentListTd"><?= $student->getFullName(); ?></td>
+            <td class="studentListTd"><?= $student->getBirthday(); ?></td>
+            <td class="studentListTd"><?= $student->getGender(); ?></td>
+            <td class="studentListTd"><?= $student->getAddress(); ?></td>
+            <td class="studentListTd"><?= $student->getClassOf(); ?></td>
+            <td class="studentListTd"><?= $student->getEmail(); ?></td>
+            <td class="studentListTd"><?= $student->getPhone(); ?></td>
             <td class="studentListTd"><a href="view/edit.php?index=<?php echo $index ?>">EDIT</a>
                 <a onclick="return confirm('Do you really want to delete this entry?')"
                    href="action/delete.php?index=<?php echo $index ?>">DELETE</a>
