@@ -140,6 +140,9 @@ class StudentManager
     public function getStudentByIndex($index)
     {
         $registrations = $this->loadRegistrations();
-        return $registrations[$index];
+        $data=new Students($registrations[$index]['fullName'],$registrations[$index]['birthDay'],$registrations[$index]['gender'],$registrations[$index]['address'],$registrations[$index]['className'],$registrations[$index]['email'],$registrations[$index]['phone'] );
+        array_push($this->listStudent,$data);
+
+        return $this->listStudent;
     }
 }
