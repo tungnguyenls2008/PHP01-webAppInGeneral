@@ -54,7 +54,7 @@ public function __destruct()
 
         return [];
     }
-public function toString(){
+public function __toString(){
     return '';
 }
 }
