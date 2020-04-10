@@ -132,7 +132,7 @@ class Students
     /**
      * @param mixed $gender
      */
-    public function setSex($gender)
+    public function setGender($gender)
     {
         $this->gender = $gender;
     }

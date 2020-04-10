@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $birthday = $_POST['birthday'];
     $gender = $_POST['gender'];
     $address = $_POST['address'];
-    $classOf = $_POST['className'];
+    $classOf = $_POST['classOf'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $hasError = false;
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         $hasError = true;
     }
     if ($hasError === false) {
-        $student=['fullName'=>$fullName,'birthday'=>$birthday, 'gender'=>$gender,'address'=>$address, 'className'=>$classOf,'email'=>$email,'phone'=>$phone];
+        $student=['fullName'=>$fullName,'birthday'=>$birthday, 'gender'=>$gender,'address'=>$address, 'classOf'=>$classOf,'email'=>$email,'phone'=>$phone];
         $studentManager = new StudentManager("../students.json");
         $studentManager->addStudent($student);
         $fullName = NULL;

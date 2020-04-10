@@ -31,9 +31,9 @@ include "../src/StudentManager.php";
             <tr>
                 <td>GENDER</td>
                 <td>
-                    <input type="radio" id="male" name="sex" value="male">Male
-                    <input type="radio" id="female" name="sex" value="female">Female
-                    <input type="radio" id="other" name="sex" value="other">Other
+                    <input type="radio" id="male" name="gender" value="male">Male
+                    <input type="radio" id="female" name="gender" value="female">Female
+                    <input type="radio" id="other" name="gender" value="other">Other
                 </td>
             </tr>
             <tr>
@@ -43,7 +43,7 @@ include "../src/StudentManager.php";
             </tr>
             <tr>
                 <td>CLASS OF</td>
-                <td><select name=" className">
+                <td><select name="classOf">
                         <option value="so">---Pick one---</option>
                         <option value="PHP 01">PHP 01</option>
                         <option value="PHP 02">PHP 02</option>

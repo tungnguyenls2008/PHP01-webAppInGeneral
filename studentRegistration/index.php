@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng ký học viên</title>
+    <title></title>
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -36,7 +36,7 @@
         <?php foreach ($students as $index => $student):
         ?>
         <tr>
-            <td class="studentListTd" hidden><input type="number" name="id[]" value="<?= $index ?>"></td>
+            <td class="studentListTd" hidden><input type="number" name="id" value="<?= $index ?>"></td>
             <td class="studentListTd"><?= $index + 1 ?></td>
             <td class="studentListTd"><?= $student->getFullName(); ?></td>
             <td class="studentListTd"><?= $student->getBirthday(); ?></td>
