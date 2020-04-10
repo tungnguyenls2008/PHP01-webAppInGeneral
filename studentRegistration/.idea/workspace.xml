@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a8499bd-98e3-4d7e-b789-72718bf0d238" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/StudentManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students.json" beforeDir="false" afterPath="$PROJECT_DIR$/students.json" afterDir="false" />
-    </list>
+    <list default="true" id="1a8499bd-98e3-4d7e-b789-72718bf0d238" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +26,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shapes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,10 +45,17 @@
       <option name="presentableId" value="Default" />
       <updated>1586403798185</updated>
       <workItem from="1586403799725" duration="12137000" />
+      <workItem from="1586449690507" duration="11598000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="262" y="239" width="424" height="485" key="FileChooserDialogImpl" timestamp="1586504129778">
+      <screen x="0" y="27" width="958" height="913" />
+    </state>
+    <state x="262" y="239" width="424" height="485" key="FileChooserDialogImpl/0.27.958.913@0.27.958.913" timestamp="1586504129778" />
   </component>
 </project>
