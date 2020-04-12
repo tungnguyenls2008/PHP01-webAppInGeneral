@@ -39,7 +39,8 @@ protected $ySpeed=0;
     public function setSpeed($xSpeed,$ySpeed){
 
     }
-    public function getSpeed{
+    public function getSpeed(){
+
 
     }
     public function __toString()
