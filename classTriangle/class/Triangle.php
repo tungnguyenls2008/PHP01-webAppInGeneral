@@ -6,14 +6,15 @@ class Triangle extends Shape
 protected $side1=1;
 protected $side2=1;
 protected $side3=1;
-protected $name='Triangle';
+public $name='Triangle';
 protected $color;
-public function __construct($name,$side1,$side2,$side3)
+public function __construct($name,$side1,$side2,$side3,$color)
 {
     parent::__construct($name);
     $this->side1=$side1;
     $this->side2=$side2;
     $this->side3=$side3;
+    $this->color=$color;
 }
 public function setDefaultTriangle(){
     $this->side1;

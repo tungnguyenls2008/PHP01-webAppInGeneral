@@ -1,4 +1,4 @@
-<?php class Shape{
+<?php class basicShape{
 public $name;
 
 public function __construct($name)

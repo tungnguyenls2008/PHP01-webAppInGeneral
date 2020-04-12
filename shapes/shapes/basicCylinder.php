@@ -1,6 +1,6 @@
 <?php
-include_once ('Circle.php');
-class Cylinder extends Circle {
+include_once('basicCircle.php');
+class basicCylinder extends basicCircle {
     public $height;
 
     public function __construct($name, $radius, $height)

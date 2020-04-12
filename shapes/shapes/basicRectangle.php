@@ -1,6 +1,6 @@
 <?php
-include_once ('Shape.php');
-class Rectangle extends Shape{
+include_once('basicShape.php');
+class basicRectangle extends basicShape{
     public $width;
     public $height;
 
